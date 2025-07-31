@@ -46,7 +46,14 @@ async function fetchNews() {
     }
 
     if (!data.articles || data.articles.length === 0) {
-      container.innerHTML = "<p>No articles found.</p>";
+      const countryName = document.getElementById("country").selectedOptions[0].text;
+      const categoryName = document.getElementById("category").selectedOptions[0].text;
+      let message = `No articles found for ${countryName}`;
+      if (categoryName !== "All") {
+        message += ` in ${categoryName} category`;
+      }
+      message += ". Try selecting a different country or category.";
+      container.innerHTML = `<p>${message}</p>`;
       return;
     }
 

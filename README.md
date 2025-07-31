@@ -206,3 +206,5 @@ docker service create \
 
 ## Credits
 News articles powered by [NewsAPI](https://newsapi.org/)
+# Demo video
+https://youtu.be/JxgOb2CGxeU
